@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(to right, #000428, #004e92);
+    color: #e0e0e0;
+}
+
+.background-image {
+    display: none; /* Use gradient background instead */
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 16px 50px 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #001933 60%, #003366 100%);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 100;
+    border-bottom: 2px solid #003366;
+}
+
+nav {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+}
+
+nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: cyan;
+  text-shadow: 0 0 10px cyan;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    transition: color 0.3s, text-shadow 0.3s;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+nav ul li a:hover {
+  color: cyan;
+  text-shadow: 0 0 10px cyan;
+}
+
+nav .register, nav .login-button {
+    padding: 4px 12px;
+    border: 2px solid #00f5ff;
+    border-radius: 8px;
+    color: #00f5ff;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: none;
+}
+
+nav .register:hover, nav .login-button:hover {
+    background: #003366;
+    color: #00f5ff;
+    box-shadow: 0 0 8px #00f5ff;
+    border-color: #00f5ff;
+}
+
+/* --- Login/Register Container --- */
+.login-container, .register-container {
+    box-shadow: 0 8px 32px 0 rgba(0, 255, 255, 0.18);
+    border-radius: 20px;
+    padding: 36px 32px 28px 32px;
+    width: 380px;
+    color: #e0e0e0;
+    background: rgba(11, 27, 44, 0.98);
+    border: 2px solid cyan;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.login-container h2, .register-container h2, .register-form h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: cyan;
+    font-size: 2rem;
+    text-shadow: 0 0 10px cyan;
+}
+
+.login-container input, .register-form input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border: 1px solid cyan;
+    background: rgba(255,255,255,0.08);
+    border-radius: 10px;
+    outline: none;
+    color: #e0e0e0;
+    font-size: 1rem;
+    box-shadow: 0 0 5px cyan inset;
+}
+
+.login-container input::placeholder, .register-form input::placeholder {
+    color: #aeefff;
+}
+
+.login-container label, .register-form label {
+    display: flex;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: cyan;
+}
+
+.login-container button, .register-form button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg, cyan 0%, #004e92 100%);
+    color: #0b1b2c;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 0 10px cyan;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.login-container button:hover, .register-form button:hover {
+    background: linear-gradient(90deg, #004e92 0%, cyan 100%);
+    color: #fff;
+    transform: scale(1.04);
+}
+
+.login-container p, .register-container p {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 15px;
+    color: cyan;
+}
+
+.login-container p a, .register-container p a {
+    color: #00f5ff;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.login-container p a:hover, .register-container p a:hover {
+    color: #00ccff;
+}
+
+/* --- Option Styles --- */
+.option-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
+.left-options {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.left-options input[type="checkbox"] {
+    margin: 0;
+    accent-color: cyan;
+}
+
+.option-login a {
+    color: cyan;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.option-login a:hover {
+    text-decoration: underline;
+    color: #00ccff;
+}
+
+@media (max-width: 600px) {
+    .login-container, .register-container {
+        width: 95vw;
+        padding: 18px 2vw;
+        margin-top: 20px;
+    }
+    nav {
+        padding: 12px 10px;
+    }
+}
+
+@media (max-width: 900px) {
+    nav {
+        padding: 12px 10px 0 10px;
+    }
+    nav .logo {
+        font-size: 24px;
+    }
+   
+    nav .register, nav .login-button {
+        font-size: 0.9rem;
+        padding: 3px 8px;
+    }
+}

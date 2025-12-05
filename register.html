@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+ <nav>
+    <div class="logo">ANDERSON PORTFOLIO</div>
+    <ul>  
+      <li><a href="index.html">Home</a></li>
+      <li><a href="login.html"><button class="login-button">Log In</button></a></li>
+    </ul>
+        
+</nav>
+
+<img src="forest.jpg" alt="forest" class="background-image">
+
+
+<div class="register-container">
+
+     
+    <form class="register-form" action="register.php" method="POST">
+
+        <h1 id="register">Register</h1>
+
+        <input type="email" id="email" name="email" placeholder="Email" required>
+
+        <input type="tel" id="phonenumber" name="phonenumber" placeholder="Phone Number" required>
+
+        <input id="birthday" type="text" placeholder="Birthday" onfocus="this.type='date'"onblur="if(!this.value) this.type='text'"/>
+
+        <input type="password" id="password" name="password" placeholder="Password" required>
+
+        <button type="submit">Register</button>
+    </form>
+    </div>
+</body>
+</html>

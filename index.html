@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greg Anderson Batestel Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <script src="contact-form.js"></script>
+  <script src="tab.js"></script>
+
+
+  <!-- Font Awesome for Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Background Animation -->
+  <div id="particles-js"></div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">ANDERSON PORTFOLIO</div>
+    <ul>  
+      <li><a href="#">Home</a></li>
+      <li><a href="#about" class="nav-active">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#activity">Activity</a></li>
+        <li><a href="#contact" class="nav-active">Contact</a></li>
+      <li><a href="login.html">Log in</a></li>
+
+
+    </ul>
+  </nav>
+
+  <!-- Social Media Sidebar -->
+  <div class="socials">
+    <a href="https://www.facebook.com/batestelgreg.anderson.1" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://x.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQFJNp8M14ZDiAAAAZkyimog8C_AppUY7c5ZjwucJKjU1wN65ye5KW7yj1Se3lq47YnPruS-xyd8d4_raCV87AgwGZp7oNMSKN-bP21sPdREM32H-Zagqx7NF6psIgNiehNAbt8=&original_referer=https://shawn123115.github.io/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fshawn-gaming-37b297300%2F" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <p>Hello, World! It's Me</p>
+      <h1 class="name">Greg Anderson M. Batestel</h1>
+      <h3>Full Stack Web Developer from Philippines</h3>
+    </div>
+
+    <div class="profile">
+      <img src="2X2.png" alt="Profile Picture">
+      <div class="skills">
+        <i class="fab fa-html5"></i>
+        <i class="fab fa-css3-alt"></i>
+        <i class="fab fa-js"></i>
+        <i class="fab fa-react"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Add extra space between Contact and Projects section -->
+  <div style="height: 64px;"></div>
+
+  <!-- About Me Section -->
+  <section class="about" id="about">
+    <h2 class="section-title">About <span>Me</span></h2>
+    <div class="about-container">
+      <!-- Left side image -->
+      <div class="about-img">
+        <img src="2X2.png" alt="About Me Image">
+      </div>
+
+      <!-- Right side content -->
+      <div class="about-content">
+        <h3>Full Stack Developer</h3>
+        <p>
+          I am Greg Anderson Batestel, a 19-year-old IT student with a 
+          strong foundation in front-end and back-end development. I am 
+          passionate about building responsive, user-friendly websites and 
+          applications, while continuously expanding my knowledge of modern 
+          web technologies. With a focus on problem-solving, adaptability, 
+          and continuous growth, I aim to become a well-rounded Full Stack 
+          Developer capable of delivering efficient and innovative digital 
+          solutions.
+        </p>
+
+        <!-- Interactive Tabs for Education, Experience, and Skills -->
+        <div class="about-tabs">
+          <button class="about-tab-btn active" onclick="showAboutTab(event, 'education')">Education</button>
+          <button class="about-tab-btn" onclick="showAboutTab(event, 'experience')">Experience</button>
+          <button class="about-tab-btn" onclick="showAboutTab(event, 'skills')">Skills</button>
+        </div>
+        <div id="about-education" class="about-tab-content" style="display:block;">
+          <h3>EDUCATION</h3>
+          <div class="education">
+            <div class="edu-row">
+              <span class="label">Tertiary</span>
+              <span class="date">2024 - Present</span>
+            </div>
+          </div>
+          <br>
+          <p>
+            Cebu Technological University - Main Campus <br>
+            Bachelor of Science in Information Technology
+          </p>
+        </div>
+        <div id="about-experience" class="about-tab-content" style="display:none;">
+          <h3>EXPERIENCE</h3>
+          <ul class="experience-list">
+            <li>
+              <div class="experience-title"><span>Deployment Assistant</span></div>
+              <ul class="experience-details">
+                <li>Assisted in setting up and deploying systems.</li>
+                <li>Provided basic troubleshooting support during installations.</li>
+              </ul>
+            </li>
+            <div class="line"></div>
+            <li>
+              <div class="experience-title"><span>Data Encoder</span></div>
+              <ul class="experience-details">
+                <li>Accurately managed and processed digital records.</li>
+                <li>Applied attention to detail and organizational skills to maintain data integrity.</li>
+              </ul>
+            </li>
+            <div class="line"></div>
+            <li>
+              <div class="experience-title"><span>Web & Software Development Projects</span></div>
+              <ul class="experience-details">
+                <li>Developed a personal portfolio website using HTML, CSS, and JavaScript.</li>
+                <li>Created a JavaFX “Create Class” Form with CSS floating labels to demonstrate UI/UX design principles.</li>
+                <li>Participated in the Programiz Seminar/Workshop to strengthen programming fundamentals.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div id="about-skills" class="about-tab-content" style="display:none;">
+          <h3>SKILLS</h3>
+          <ul class="skills-list">
+            <li>
+              <div class="skill-title"><span>Programming Languages</span></div>
+              <ul class="skill-description">
+                <li>Python, Java, JavaFX, HTML, CSS</li>
+              </ul>
+            </li>
+            <div class="line"></div>
+            <li>
+              <div class="skill-title"><span>Web Development</span></div>
+              <ul class="skill-description">
+                <li>Portfolio website design, CSS animations, UI/UX basics</li>
+              </ul>
+            </li>
+            <div class="line"></div>
+            <li>
+              <div class="skill-title"><span>Technical Skills</span></div>
+              <ul class="skill-description">
+                <li>Troubleshooting, deployment support, data encoding</li>
+              </ul>
+            </li>
+            <div class="line"></div>
+            <li>
+              <div class="skill-title"><span>Soft Skills</span></div>
+              <ul class="skill-description">
+                <li>Communication, teamwork, problem-solving, adaptability</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <h2>My Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <div class="icon">🖥️</div>
+        <h3>System Deployment & Support</h3>
+        <p>Professional assistance in setting up and deploying computer systems with basic troubleshooting support during installations.</p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+
+      <div class="card">
+        <div class="icon">🌐</div>
+        <h3>Data Management</h3>
+        <p>Accurate processing and organization of digital records, ensuring data integrity and attention to detail.</p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+
+      <div class="card">
+        <div class="icon">💻</div>
+        <h3>Web & Software Development</h3>
+        <p>Design and development of portfolio websites, CSS animations, and user-friendly interfaces using Python, Java, JavaFX, HTML, and CSS.</p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+      <!-- Latest Project Section -->
+      <section class="latest-project" id="latest-project" style="max-width:1100px; margin:50px auto; background:rgba(13,35,56,0.85); border-radius:18px; box-shadow:0 0 16px #00f5ff; padding:40px 32px;">
+        <h2 class="section-title">Latest <span>Project</span></h2>
+        <div style="display:flex;align-items:center;gap:32px;flex-wrap:wrap;">
+          <img src="latest-project.png" alt="Latest Project Screenshot" style="width:320px;max-width:100%;border-radius:12px;border:2px solid #00f5ff;box-shadow:0 0 12px #00f5ff;">
+          <div style="flex:1;min-width:220px;">
+            <h3 style="color:#00f5ff;font-size:1.6rem;margin-bottom:12px;">Vroomify E-Commerce</h3>
+            <p style="color:#e0e0e0;font-size:1.1rem;line-height:1.6;margin-bottom:18px;"> Individuals can buy and sell vehicles directly without relying on dealerships. This web app provides a secure,  user-friendly environment for listing cars, comparing prices, and connecting buyers and sellers through verified profiles. It is useful because reduces middleman costs, simplifies the car selling cost car-selling process, and empowers everyday users  to transact safely and transparently online.</p>
+            <ul style="color:#00f5ff;font-size:1rem;margin-bottom:12px;">
+              <li>Technology: Blade, PHP, JavaScript</li>
+              <li>Year: 2025</li>
+            </ul>
+            <a href="#" style="display:inline-block;padding:12px 32px;background:linear-gradient(90deg,#00f5ff 0%,#1e90ff 100%);color:#0b1b2c;font-weight:bold;border-radius:10px;text-decoration:none;box-shadow:0 2px 8px #00f5ff;">View Project</a>
+          </div>
+        </div>
+      </section>
+    
+    <div class="projects-container">
+      <h2 class="section-title">My <span>Projects</span></h2>
+      <table class="simple-table">
+      <tr>
+        <th>Project</th>
+        <th>Technology</th>
+        <th>Year</th>
+      </tr>
+       <tr>
+        <td>Vroomify E-Commerce</td>
+        <td>Blade, PHP, Javascript</td>
+        <td>2025</td>
+      </tr>
+      <tr>
+        <td>Portfolio Website</td>
+        <td>HTML, CSS, JS</td>
+        <td>2025</td>
+      </tr>
+      <tr>
+        <td>Create Class Form</td>
+        <td>Java, JavaFX</td>
+        <td>2024</td>
+      </tr>
+      <tr>
+        <td>Data Encoding App</td>
+        <td>Python</td>
+        <td>2023</td>
+      </tr>
+    </table>
+    
+  </section>
+
+  <!-- Activity Section -->
+  <section class="color-changer" id="activity">
+    <h2 class="section-title">Acti<span>vity</span></h2>
+    <div>
+      <a href="change-color.html" target="_blank">
+        <button onclick="changeColor('lightblue')">CHANGE BACKGROUND COLOR OF THE BOX</button>
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2 class="contact-title">Contact <span>Me</span></h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p><i class="fas fa-envelope"></i> anderson.batestel12@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +62 962 575 8658</p>
+        <p><i class="fas fa-map-marker-alt"></i> Basak, Kagudoy, Lapu-Lapu, Philippines</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/batestelgreg.anderson.1" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQFJNp8M14ZDiAAAAZkyimog8C_AppUY7c5ZjwucJKjU1wN65ye5KW7yj1Se3lq47YnPruS-xyd8d4_raCV87AgwGZp7oNMSKN-bP21sPdREM32H-Zagqx7NF6psIgNiehNAbt8=&original_referer=https://shawn123115.github.io/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fshawn-gaming-37b297300%2F" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <form id="contact-form" class="contact-form" action="https://formspree.io/f/meoyzrdj" method="POST">
+        <label style="font-weight: bold; color: #00f5ff;">Email:</label>
+        <input type="email" name="email" required placeholder="Your Email">
+        <label style="font-weight: bold; color: #00f5ff;">Subject:</label>
+        <input type="text" name="subject" required placeholder="Subject">
+        <label style="font-weight: bold; color: #00f5ff;">Message:</label>
+        <textarea name="message" required placeholder="Your Message"></textarea>
+        <button id="my-form-button" type="submit">SEND MESSAGE</button>
+        <p id="my-form-status" style="text-align:center; color:#00f5ff; font-weight:bold;"></p>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>
