@@ -60,7 +60,6 @@
     </div>
   </section>
 
-  <!-- Add extra space between Contact and Projects section -->
   <div style="height: 64px;"></div>
 
   <!-- About Me Section -->
@@ -205,7 +204,7 @@
       <section class="latest-project" id="latest-project" style="max-width:1100px; margin:50px auto; background:rgba(13,35,56,0.85); border-radius:18px; box-shadow:0 0 16px #00f5ff; padding:40px 32px;">
         <h2 class="section-title">Latest <span>Project</span></h2>
         <div style="display:flex;align-items:center;gap:32px;flex-wrap:wrap;">
-          <img src="latest-project.png" alt="Latest Project Screenshot" style="width:320px;max-width:100%;border-radius:12px;border:2px solid #00f5ff;box-shadow:0 0 12px #00f5ff;">
+          <img src="Vroomify1.jpg" alt="Latest Project Dashboard" style="width:320px;max-width:100%;border-radius:12px;border:2px solid #00f5ff;box-shadow:0 0 12px #00f5ff;">
           <div style="flex:1;min-width:220px;">
             <h3 style="color:#00f5ff;font-size:1.6rem;margin-bottom:12px;">Vroomify E-Commerce</h3>
             <p style="color:#e0e0e0;font-size:1.1rem;line-height:1.6;margin-bottom:18px;"> Individuals can buy and sell vehicles directly without relying on dealerships. This web app provides a secure,  user-friendly environment for listing cars, comparing prices, and connecting buyers and sellers through verified profiles. It is useful because reduces middleman costs, simplifies the car selling cost car-selling process, and empowers everyday users  to transact safely and transparently online.</p>
@@ -213,7 +212,38 @@
               <li>Technology: Blade, PHP, JavaScript</li>
               <li>Year: 2025</li>
             </ul>
-            <a href="#" style="display:inline-block;padding:12px 32px;background:linear-gradient(90deg,#00f5ff 0%,#1e90ff 100%);color:#0b1b2c;font-weight:bold;border-radius:10px;text-decoration:none;box-shadow:0 2px 8px #00f5ff;">View Project</a>
+                      <a href="#" id="viewProjectBtn" style="display:inline-block;padding:12px 32px;background:linear-gradient(90deg,#00f5ff 0%,#1e90ff 100%);color:#0b1b2c;font-weight:bold;border-radius:10px;text-decoration:none;box-shadow:0 2px 8px #00f5ff;">View Project</a>
+            <!-- Project Modal -->
+            <div id="projectModal" class="modal">
+              <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <div class="flip-container">
+                  <div class="flipper" id="flipper">
+                    <div class="front">
+                      <div class="modal-imgs-custom-row">
+                        <img src="Vroomify1.jpg" alt="Vroomify 1" class="modal-img modal-img-left">
+                        <img src="Vroomify2.jpg" alt="Vroomify 2" class="modal-img modal-img-right">
+                      </div>
+                      <div class="modal-flip-btn-row">
+                        <button class="flip-btn" onclick="flipCard()">View Video</button>
+                      </div>
+                    </div>
+                    <div class="back">
+                      <video class="modal-video" controls>
+                        <source src="Vroomify.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                      <div class="modal-flip-btn-row">
+                        <button class="flip-btn" onclick="flipCard()">Back to Images</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Modal JS -->
+            <script src="project-modal.js"></script>
           </div>
         </div>
       </section>
